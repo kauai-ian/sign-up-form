@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet" />
+
     <script src="main.js" defer></script>
     <title>Sign Up Form</title>
   </head>
@@ -19,7 +21,7 @@
       <div class="bg">
         <div class="logo-container">
           <div class="logo-background"></div>
-          <div class="logo"></div>
+          <div class="logo bounce-1"></div>
           <p class="logo_text">Da Kauai Gardener</p>
         </div>
         <div class="attribution">
@@ -50,7 +52,7 @@
           <h2 class="form-h2">
             Sign up <em>today</em> to recieve our most recent newsletter!
           </h2>
-          <form action="#">
+          <form name="mailingList" method="post" action="#" id="mailingList">
             <div class="flex form-box">
               <div class="group1">
                 <div class="input-container">
@@ -79,6 +81,7 @@
                     id="tel"
                     name="tel"
                     placeholder=""
+                    pattern='[0-9]{10}'
                     required
                   />
                 </div>
@@ -88,9 +91,10 @@
                     type="password"
                     id="password"
                     name="password"
-                    minlength="8"
+                    minlength="5"
                     maxlength="20"
                     required
+                    pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
                   />
                 </div>
                 <div class="input-container">
@@ -99,9 +103,10 @@
                     type="password"
                     id="confirm_password"
                     name="confirm_password"
-                    minlength="8"
+                    minlength="5"
                     maxlength="20"
                     required
+                    pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
                   />
 
                   <span id="message">*passwords do not match</span>
@@ -111,7 +116,16 @@
           </form>
         </div>
         <div class="section3">
-          <button type="submit">Create Account</button>
+          <button
+            type="submit"
+            name="submit"
+            value="registration"
+            id="submit"
+            class=""
+            form="mailingList"
+          >
+            Create Account
+          </button>
           <div>
             <p class="log_in">
               Already have an account? <a href="#" target="_blank">Log in</a>
