@@ -1,0 +1,258 @@
+.blue {
+  border: 1px solid blue;
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.red {
+  border: 1px solid red;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h4 {
+  line-height: 20px;
+  font-size: 1.3rem;
+}
+
+em {
+  font-style: italic;
+}
+
+.root-container {
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+
+/* left side */
+
+.bg {
+  width: 40%;
+  height: 100vh;
+  background-image: url(./images/_11ba7d24-edd1-48cc-a1bb-ea978b79ee02.jpeg);
+  background-repeat: no-repeat;
+  image-rendering: optimizeQuality;
+  background-size: cover;
+  position: relative;
+}
+
+.logo-container {
+  height: 150px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 250px;
+  gap: 15px;
+}
+
+.logo-background {
+  background-color: rgba(1, 1, 1, 0.561);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 0 5px 1px #000000;
+  -moz-box-shadow: 0 0 5px 1px #000000;
+  box-shadow: 0 4px 5px 1px #000000;
+}
+
+.logo {
+  width: 30vh;
+  height: 30vh;
+  margin: -60px;
+  background-image: url(./images/logo_tropical_gardener-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  position: relative;
+  z-index: 1;
+}
+
+.logo_text {
+  color: white;
+  font-size: 1.8rem;
+  z-index: 1;
+  font-family: "Roboto", "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 50px;
+  width: 50px;
+  position: relative;
+  text-overflow: ;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.attribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Right side  */
+
+.content {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 5vh 0 5vh 0px;
+  margin: 0;
+}
+
+.content-container {
+  width: 60vw;
+  padding-left: 30px;
+  padding-top: 5vh;
+}
+
+.form-container {
+  background-color: #ffffff;
+  margin-top: 50px;
+  padding: 50px 10px 30px 30px;
+  box-shadow: 0 3px 2px 0px#9f9e9eaa;
+  height: 30vh;
+}
+.form-h2 {
+  margin-left: 0px;
+  padding-bottom: 10px;
+}
+
+.form-box {
+  height: 18vh;
+  column-gap: 50px;
+}
+
+.group1, .group2 {
+display: flex;
+flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  width: auto;
+}
+
+input {
+  margin-bottom: 25px;
+  margin-right: 10px;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  height: 20px;
+  width: clamp(50%, 250px ,450px);
+  border: 1px solid rgb(232, 228, 228);
+  border-radius: 3px;
+}
+
+input:focus {
+  box-shadow: 0 5px 5px 5px#9f9e9eaa;
+}
+
+.section3 {
+  padding-left: 30px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #596d48;
+  width: 20%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #f0f0f0;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.log_in :link {
+  color: #596d48;
+  text-decoration: none;
+}
+
+/* add a red border to invalid form fields */
+input:invalid {
+  border: 1px solid red;
+}
+/* add a green border around valid inputs. */
+input:valid {
+  border: 1px solid forestgreen;
+}
+
+/* add a red message when js is called to match passwords */
+#message {
+  display: none;
+  color: red;
+  font-size: 10px;
+  padding-top: -20px;
+  margin-top: -20px;
+}
+
+@media only screen and (max-width:999px) {
+  .flex {
+    flex-flow: column;
+  }
+
+  .bg {
+    width: 100vw;
+    background-size:cover;
+  }
+
+.content-container {
+  width: auto;
+  padding-right: 10px;
+}
+
+  .form-container {
+width: auto;
+height: auto;
+  }
+
+  .form-box {
+    height: auto;
+    width: auto;
+  }
+
+  button {
+    width: 50vw;
+    max-width: 150px;
+  }
+}
