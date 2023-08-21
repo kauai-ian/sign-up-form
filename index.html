@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
+    <!-- <link rel="stylesheet" href="reset.css" /> -->
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,12 +17,15 @@
     <title>Sign Up Form</title>
   </head>
   <body>
-    <div class="flex">
+    <div class="main">
       <div class="bg">
         <div class="logo-container">
-          <div class="logo-background"></div>
-          <div class="logo bounce-1"></div>
-          <p class="logo_text">Da Kauai Gardener</p>
+          <div class="logo-trap">
+          <img src="./images/logo_tropical_gardener.svg" alt="logo" />
+          <div class="logo-text">
+            <h1>Da <br>Kauai<br> Gardener</h1>
+          </div>
+        </div>
         </div>
         <div class="attribution">
           <p>
@@ -48,73 +51,79 @@
             that can help answer gardening questions specific to our island.
           </h4>
         </div>
-        <div class="form-container">
-          <h2 class="form-h2">
-            Sign up <em>today</em> to recieve our most recent newsletter!
-          </h2>
-          <form name="mailingList" method="post" action="#" id="mailingList">
-            <div class="flex form-box">
-              <div class="group1">
-                <div class="input-container">
-                  <label for="first_name">First Name</label>
-                  <input
-                    type="text"
-                    id="first_name"
-                    name="first_name"
-                    required
-                  />
-                </div>
-                <div class="input-container">
-                  <label for="last_name">Last Name</label>
-                  <input type="text" id="last_name" name="last_name" required />
-                </div>
-                <div class="input-container">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
+        <div>
+          <div class="form-container">
+            <h2>
+              Sign up <em>today</em> to recieve our most recent newsletter!
+            </h2>
+            <form
+              name="mailingList"
+              method="post"
+              action="#"
+              id="mailingList"
+            >
+            <div class="group1">
+              <div class="input-container">
+                <label for="first_name">First Name</label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  required
+                />
               </div>
-              <div class="group2">
-                <div class="input-container">
-                  <label for="tel">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="tel"
-                    name="tel"
-                    placeholder=""
-                    pattern='[0-9]{10}'
-                    required
-                  />
-                </div>
-                <div class="input-container">
-                  <label for="password">Password</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    minlength="5"
-                    maxlength="20"
-                    required
-                    pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-                  />
-                </div>
-                <div class="input-container">
-                  <label for="confirm_password">Confirm Password</label>
-                  <input
-                    type="password"
-                    id="confirm_password"
-                    name="confirm_password"
-                    minlength="5"
-                    maxlength="20"
-                    required
-                    pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
-                  />
-
-                  <span id="message">*passwords do not match</span>
-                </div>
+              <div class="input-container">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required />
+              </div>
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
               </div>
             </div>
-          </form>
+            <div class="group2">
+              <div class="input-container">
+                <label for="tel">Phone Number</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  placeholder=""
+                  pattern='[0-9]{10}'
+                  required
+                />
+              </div>
+              <div class="input-container">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  minlength="5"
+                  maxlength="20"
+                  required
+                  pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
+                />
+              </div>
+              <div class="input-container">
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  minlength="5"
+                  maxlength="20"
+                  required
+                  pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
+                />
+
+                <span id="message">*passwords do not match</span>
+              </div>
+            </div>
+            </form>
+          </div>
         </div>
+
         <div class="section3">
           <button
             type="submit"

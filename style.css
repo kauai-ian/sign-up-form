@@ -14,89 +14,90 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-}
-
-h2 {
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-  font-weight: 700;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-width: 375px;
 }
 
 h4 {
   line-height: 20px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 em {
   font-style: italic;
 }
 
-.root-container {
-  height: 100%;
-}
-.flex {
+.main {
   display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-width: 375px;
 }
 
 /* left side */
 
 .bg {
-  width: 33%;
+  width: 60vw;
+  min-width: 345px;
   height: 100vh;
   background-image: url(./images/_11ba7d24-edd1-48cc-a1bb-ea978b79ee02.jpeg);
   background-repeat: no-repeat;
-  image-rendering: optimizeQuality;
   background-size: cover;
-  position: relative;
-}
-
-.logo-container {
-  height: 10em;
-  padding: 1rem;
   display: flex;
   justify-content: center;
   position: relative;
-  margin-top: 25%;
-  /* gap: 1em; */
+  flex-grow: 1;
 }
 
-.logo-background {
+.logo-container {
+  width: 100%;
+  min-width: 345px;
+  height: 10rem;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
   background-color: rgba(1, 1, 1, 0.561);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   -webkit-box-shadow: 0 0 5px 1px #000000;
   -moz-box-shadow: 0 0 5px 1px #000000;
   box-shadow: 0 4px 5px 1px #000000;
-  animation: fadeIn 2s;
+  animation: fadeIn 4s;
 }
 
-.logo {
-  width: 10em;
-  height: 8em;
-  background-image: url(./images/logo_tropical_gardener.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.logo-trap {
+  width: 20vw;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+}
+
+.logo-container img {
+  width: 15vw;
+  /* padding: 5px; */
   filter: invert(100%);
   -webkit-filter: invert(100%);
-  position: relative;
   z-index: 1;
   animation: fadeIn 8s;
 }
 
-.logo_text {
-  color: white;
-  font-size: 1.8em;
+.logo-text {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h1 {
   z-index: 1;
+  font-size: 1.5em;
+  color: white;
   font-family: "Roboto", "Arial Narrow Bold", sans-serif;
   font-weight: 900;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   line-height: 1.8em;
-  width: 4em;
   animation: fadeIn 8s;
-  padding-right: 1em;
 }
 
 @keyframes fadeIn {
@@ -126,63 +127,80 @@ em {
 /* Right side  */
 
 .content {
-  flex: 1;
+  display: flex;
+  width: 60vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-grow: 2;
   background-color: #f0f0f0;
-  padding: 5vh 0 3vh 0px;
+  padding: 5vh 3vw 3vh 0;
   margin: 0;
 }
 
 .content-container {
-  width: 66vw;
-  padding-left: 30px;
+  width: 60vw;
+  padding-left: 2vw;
   padding-top: 3vh;
-  padding-right: 5vw;
+  padding-right: 2vw;
+}
+
+.content-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .form-container {
+  width: 60vw;
   background-color: #ffffff;
-  margin-top: 50px;
-  padding: 50px 10px 30px 30px;
+  margin-top: 2vw;
+  padding: 1.2rem 2vw 3rem 2vw;
   box-shadow: 0 3px 2px 0px#9f9e9eaa;
-  height: 37vh;
+  display: flex;
+  flex-direction: column;
 }
-.form-h2 {
-  margin-left: 0px;
+.form-container h2 {
   padding-bottom: 2vh;
+  font-size: 1.3rem;
 }
 
-.form-box {
-  height: 25vh;
-  column-gap: 50px;
-  overflow: scroll;
+form {
+  display: flex;
+  width: 60vw;
+  flex-flow: row wrap;
+  gap: 1rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .group1,
 .group2 {
   display: flex;
   flex-direction: column;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
+  gap: 10px;
 }
 
 label {
+  position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8rem;
-  font-weight: 400;
-  width: auto;
+  width: 15rem;
+  margin-bottom: 5px;
 }
 
 input {
-  margin-bottom: 25px;
   margin-right: 10px;
+  margin-top: 3px;
+  padding: 5px 10px;
   font-family: "Roboto";
   font-size: 0.9rem;
-  height: 20px;
   width: clamp(50%, 250px, 450px);
   border: 1px solid rgb(232, 228, 228);
   border-radius: 3px;
@@ -193,7 +211,7 @@ input:focus {
 }
 
 .section3 {
-  padding-left: 30px;
+  padding-left: 2vw;
   padding-top: 30px;
   display: flex;
   flex-direction: column;
@@ -201,7 +219,6 @@ input:focus {
 
 button {
   background-color: #596d48;
-  width: 20%;
   height: 40px;
   border: none;
   border-radius: 5px;
@@ -209,7 +226,7 @@ button {
   font-weight: 300;
   color: #ffffff;
   letter-spacing: 1.5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 button:after {
@@ -221,10 +238,6 @@ button:after {
   text-decoration: none;
 }
 
-/* add a red border to invalid form fields */
-/* input:invalid {
-  border: 1px solid red;
-} */
 /* add a green border around valid inputs. */
 input:valid {
   border: 1px solid forestgreen;
@@ -240,13 +253,19 @@ input:valid {
 }
 
 @media only screen and (max-width: 850px) {
-  .flex {
+  .main {
     flex-flow: column;
   }
 
   .bg {
-    width: 100vw;
+    width: auto;
     background-size: cover;
+  }
+
+  .logo-trap {
+    justify-content: center;
+    align-items: center;
+    width: auto;
   }
 
   .attribution {
@@ -254,9 +273,14 @@ input:valid {
     margin-top: 40vh;
   }
 
+  .content {
+    width: auto;
+  }
+
   .content-container {
     width: auto;
     padding-right: 10px;
+    padding-left: 10px;
   }
 
   .form-container {
@@ -264,7 +288,64 @@ input:valid {
     height: auto;
   }
 
-  .form-box {
+  .form {
+    height: auto;
+    width: auto;
+  }
+
+  button {
+    width: 50vw;
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main {
+    flex-flow: column;
+  }
+
+  .bg {
+    width: auto;
+    background-size: cover;
+  }
+
+  .logo-container {
+    height: 40vh;
+    align-items: center;
+  }
+  .logo-container img {
+    width: 30vw;
+  }
+  .logo-trap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+  }
+
+
+  .attribution {
+    position: absolute;
+    margin-top: 40vh;
+  }
+
+  .content {
+    width: auto;
+  }
+
+  .content-container {
+    width: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .form-container {
+    width: auto;
+    height: auto;
+  }
+
+  .form {
     height: auto;
     width: auto;
   }
