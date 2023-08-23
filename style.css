@@ -2,6 +2,7 @@
   border: 1px solid blue;
 }
 
+
 .green {
   border: 1px solid green;
 }
@@ -21,16 +22,22 @@ body {
 }
 
 h4 {
-  line-height: 20px;
   font-size: 1.2rem;
   font-weight: 300;
+  margin-bottom: 4px;
 }
 
+h5 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 3px;
+  margin-top: 4px;
+}
 em {
   font-style: italic;
 }
 
-.main {
+main {
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -146,7 +153,7 @@ em {
 }
 
 .content-container h2 {
-  margin-bottom: 15px;
+  margin-bottom: 1em;
   font-size: 1.3rem;
   font-weight: 700;
 }
@@ -154,12 +161,13 @@ em {
 .form-container {
   width: 60vw;
   background-color: #ffffff;
-  margin-top: 2vw;
+  margin-top: 1vw;
   padding: 1.2rem 2vw 3rem 2vw;
   box-shadow: 0 3px 2px 0px#9f9e9eaa;
   display: flex;
   flex-direction: column;
 }
+
 .form-container h2 {
   padding-bottom: 2vh;
   font-size: 1.3rem;
@@ -174,16 +182,16 @@ form {
   background-color: #ffffff;
 }
 
-.input-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .group1,
 .group2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -248,12 +256,10 @@ input:valid {
   display: none;
   color: red;
   font-size: 10px;
-  padding-top: -20px;
-  margin-top: -20px;
 }
 
 @media only screen and (max-width: 850px) {
-  .main {
+  main {
     flex-flow: column;
   }
 
@@ -288,7 +294,7 @@ input:valid {
     height: auto;
   }
 
-  .form {
+  form {
     height: auto;
     width: auto;
   }
@@ -300,7 +306,7 @@ input:valid {
 }
 
 @media only screen and (max-width: 550px) {
-  .main {
+  main {
     flex-flow: column;
   }
 
@@ -324,7 +330,10 @@ input:valid {
     height: fit-content;
   }
 
-
+  .logo-text {
+    text-align: center;
+    margin-left: -50px;
+  }
   .attribution {
     position: absolute;
     margin-top: 40vh;
@@ -345,7 +354,7 @@ input:valid {
     height: auto;
   }
 
-  .form {
+  form {
     height: auto;
     width: auto;
   }
@@ -355,6 +364,8 @@ input:valid {
     max-width: 150px;
   }
 }
+
+/* animation of button */
 
 .glow-on-validation {
   width: 220px;
@@ -432,4 +443,43 @@ input:valid {
   100% {
     background-position: 0 0;
   }
+}
+
+/* backpages formatting */
+
+.bg2 {
+  width: auto;
+  min-width: 345px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url(./images/_56e01b1e-6d6c-4586-8802-83a33b028224.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  flex-grow: 1;
+}
+
+.second-logo-container {
+  width: 100vw;
+  min-width: 345px;
+  height: 10rem;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(1, 1, 1, 0.561);
+  -webkit-box-shadow: 0 0 5px 1px #000000;
+  -moz-box-shadow: 0 0 5px 1px #000000;
+  box-shadow: 0 4px 5px 1px #000000;
+  animation: fadeIn 4s;
+}
+
+.logo-trap2 {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  height: fit-content;
+  margin-top: 2rem;
+  text-align: center;
 }

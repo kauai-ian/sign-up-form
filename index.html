@@ -11,21 +11,23 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet" />
 
     <script src="main.js" defer></script>
     <title>Sign Up Form</title>
   </head>
   <body>
-    <div class="main">
+    <main>
       <div class="bg">
         <div class="logo-container">
           <div class="logo-trap">
-          <img src="./images/logo_tropical_gardener.svg" alt="logo" />
-          <div class="logo-text">
-            <h1>Da <br>Kauai<br> Gardener</h1>
+            <img src="./images/logo_tropical_gardener.svg" alt="logo" />
+            <div class="logo-text">
+              <h1>
+                Da <br />Kauai<br />
+                Gardener
+              </h1>
+            </div>
           </div>
-        </div>
         </div>
         <div class="attribution">
           <p>
@@ -46,39 +48,26 @@
             Chances are you have had a plant question more than once yeah?
           </h4>
           <span></span>
-          <h4>
+          <h5>
             <br />Our newsletters are filled with brief information and tools
             that can help answer gardening questions specific to our island.
-          </h4>
+          </h5>
         </div>
-        <div>
-          <div class="form-container">
-            <h2>
-              Sign up <em>today</em> to recieve our most recent newsletter!
-            </h2>
-            <form
-              name="mailingList"
-              method="post"
-              action="#"
-              id="mailingList"
-            >
+        <fieldset class="form-container">
+          <h2>Sign up <em>today</em> to recieve our most recent newsletter!</h2>
+          <form name="mailingList" method="post" action="#" id="mailingList">
             <div class="group1">
               <div class="input-container">
                 <label for="first_name">First Name</label>
-                <input
-                  type="text"
-                  id="first_name"
-                  name="first_name"
-                  required
-                />
+                <input type="text" id="first_name" name="first_name" required autocomplete="given-name" />
               </div>
               <div class="input-container">
                 <label for="last_name">Last Name</label>
-                <input type="text" id="last_name" name="last_name" required />
+                <input type="text" id="last_name" name="last_name" required autocomplete="family-name" required />
               </div>
               <div class="input-container">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" required autocomplete="email" />
               </div>
             </div>
             <div class="group2">
@@ -88,9 +77,8 @@
                   type="tel"
                   id="tel"
                   name="tel"
-                  placeholder=""
-                  pattern='[0-9]{10}'
                   required
+                  autocomplete="tel"
                 />
               </div>
               <div class="input-container">
@@ -102,7 +90,8 @@
                   minlength="5"
                   maxlength="20"
                   required
-                  pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
+                  autocomplete="current-password"
+                  
                 />
               </div>
               <div class="input-container">
@@ -114,34 +103,28 @@
                   minlength="5"
                   maxlength="20"
                   required
-                  pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
+                  autocomplete="current-password"
+                  
                 />
 
                 <span id="message">*passwords do not match</span>
               </div>
             </div>
-            </form>
-          </div>
-        </div>
+          </form>
+        </fieldset>
 
         <div class="section3">
-          <button
-            type="submit"
-            name="submit"
-            value="registration"
-            id="submit"
-            class=""
-            form="mailingList"
-          >
+          <button type="submit" for="form" form="mailingList" id="btn">
             Create Account
           </button>
           <div>
             <p class="log_in">
-              Already have an account? <a href="#" target="_blank">Log in</a>
+              Already have an account?
+              <a href="./existingUser.html" target="_blank">Log in</a>
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
